@@ -1,6 +1,7 @@
 package mediator;
 
 import org.example.mediator.Comprador;
+import org.example.mediator.Usuario;
 import org.example.mediator.Produto;
 import org.example.mediator.Vendedor;
 import org.junit.jupiter.api.Test;
