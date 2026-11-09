@@ -2,24 +2,18 @@ package org.example.mediator;
 
 public class Vendedor {
 
-    private static Vendedor instancia = new Vendedor();
+    public Vendedor(){};
 
-    private Vendedor() {}
-
-    public static Vendedor getInstancia() {
-        return instancia;
+    public String receberPedido(Produto produto) {
+        return "O vendedor recebeu o pedido: " + produto.getNome();
     }
 
-    public String receberPedido(String pedido) {
-        return "O vendedor recebeu o pedido: " + pedido;
+    public String receberCancelamento(Produto produto) {
+        return "O vendedor recebeu o cancelamento do pedido: " + produto.getNome();
     }
 
-    public String receberCancelamento(String pedido) {
-        return "O vendedor recebeu o cancelamento do pedido: " + pedido;
-    }
-
-    public String receberReclamacao(String mensagem) {
-        return "O vendedor recebeu a reclamacao: " + mensagem;
+    public String receberReclamacao(Produto produto, String mensagem) {
+        return "O vendedor recebeu a reclamacao: '" + mensagem + "', para o produto: " + produto.getNome();
     }
 
 }

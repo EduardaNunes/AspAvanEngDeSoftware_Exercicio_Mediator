@@ -2,16 +2,16 @@ package org.example.mediator;
 
 public class Comprador {
 
-    public String fazerPedido(String pedido) {
-        return Marketplace.getInstancia().receberPedidoParaVendedor(pedido);
+    public String fazerPedido(Produto produto) {
+        return Marketplace.getInstancia().receberPedidoParaVendedor(produto);
     }
 
-    public String solicitarCancelamento(String pedido) {
-        return Marketplace.getInstancia().receberSolicitacaoDeCancelamentoParaVendedor(pedido);
+    public String solicitarCancelamento(Produto produto) {
+        return Marketplace.getInstancia().receberSolicitacaoDeCancelamentoParaVendedor(produto);
     }
 
-    public String fazerReclamacao(String mensagem) {
-        return Marketplace.getInstancia().receberReclamacaoParaVendedor(mensagem);
+    public String fazerReclamacao(Produto produto, String mensagem) {
+        return Marketplace.getInstancia().receberReclamacaoParaVendedor(produto, mensagem);
     }
 
 }

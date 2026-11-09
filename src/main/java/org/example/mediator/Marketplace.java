@@ -10,22 +10,22 @@ public class Marketplace {
         return instancia;
     }
 
-    public String receberPedidoParaVendedor(String pedido) {
+    public String receberPedidoParaVendedor(Produto produto) {
         return "O Marketplace X agradece seu contato.\n"+
                 "O Vendedor respondeu seu pedido conforme mensagem a seguir.\n" +
-                ">>" + Vendedor.getInstancia().receberPedido(pedido);
+                ">>" + produto.getVendedor().receberPedido(produto);
     }
 
-    public String receberSolicitacaoDeCancelamentoParaVendedor(String pedido) {
+    public String receberSolicitacaoDeCancelamentoParaVendedor(Produto produto) {
         return "O Marketplace X agradece seu contato.\n"+
                 "O Vendedor respondeu sua solicitação de cancelamento conforme mensagem a seguir.\n" +
-                ">>" + Vendedor.getInstancia().receberCancelamento(pedido);
+                ">>" + produto.getVendedor().receberCancelamento(produto);
     }
 
-    public String receberReclamacaoParaVendedor(String mensagem) {
+    public String receberReclamacaoParaVendedor(Produto produto, String mensagem) {
         return "O Marketplace X agradece seu contato.\n"+
                 "O Vendedor respondeu sua reclamação conforme mensagem a seguir.\n" +
-                ">>" + Vendedor.getInstancia().receberReclamacao(mensagem);
+                ">>" + produto.getVendedor().receberReclamacao(produto, mensagem);
     }
 
 }
